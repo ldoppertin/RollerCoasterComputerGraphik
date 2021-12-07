@@ -18,7 +18,7 @@ Das Projekt besteht aus zwei Teilen:
 1. Erstellen und samplen eines Torus-Knoten nach individuell einstellbaren Parametern, und
 2. Berechnung und Visualisierung einer Achterbahn durch Bezierkurven, welche entlang der Torus-Knoten (oder anderen) Samples laufen sollen.
 
-Um das Programm zu nutzen, kann es z.B. als Projekt in Pycharm geöffnet und dort ausgeführt werden. Alternativ können die Befehle (auch nachfolgend erklärt) über die Konsole ausgeführt werden. 
+Um das Programm zu nutzen, muss dieses Repository zunächst geklont werden (Button "Code" -> kopieren des ssh- oder https-Eintrages -> im ausgewählten Speicherort "git clone" und den kopierten Eintrag pasten). Dann kann es z.B. als Projekt in Pycharm geöffnet und dort ausgeführt werden. Alternativ können die Befehle (auch nachfolgend erklärt) über die Konsole ausgeführt werden. 
 
 ### 1. Torus-Knoten Sampling
 
