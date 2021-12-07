@@ -47,7 +47,6 @@ if __name__ == "__main__":
     p = int(args.p)
     q = int(args.q)
     n_samples = int(args.nSamples)
-    print(p, q, n_samples)
     torus_samples = generate_torus_knot_samples(p, q, n_samples)
     save_as_csv(torus_samples, f"TorusSamples_{p}_{q}_{n_samples}.csv")
     print("Script finished.")

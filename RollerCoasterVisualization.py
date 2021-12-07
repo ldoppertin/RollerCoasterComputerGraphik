@@ -13,8 +13,8 @@ import numpy as np
 from matplotlib import cm
 from matplotlib.animation import FuncAnimation
 
-from CurveGeneration import get_curve_data, read_file
-from MathHelpers import get_geometric_behaviour
+from Modules.CurveGeneration import get_curve_data, read_file
+from Modules.MathHelpers import get_geometric_behaviour
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-filepath")
@@ -117,7 +117,7 @@ class RollerCoaster:
         """
         Read and process the data, then draw the Roller Coaster and corresponding geometrical measures.
         """
-        torus_sample_points = read_file(SAMPLES)
+        torus_sample_points = SAMPLES
         self.Data = get_curve_data(torus_sample_points)
         self.add_point_calculations_to_data(5)
         self.GeometricValues = get_geometric_behaviour(self.Data["first_derivative_points"],
@@ -169,7 +169,7 @@ class RollerCoaster:
 
 
 if __name__ == "__main__":
-    SAMPLES = args.filepath
+    SAMPLES = read_file(args.filepath)
     coaster = RollerCoaster()
     coaster.draw_roller_coaster()
     print("Script finished.")

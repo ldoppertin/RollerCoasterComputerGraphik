@@ -4,7 +4,7 @@ from typing import *
 
 import numpy as np
 
-from MathHelpers import get_bezier_curve, get_bezier_first_derivative, get_bezier_second_derivative, \
+from Modules.MathHelpers import get_bezier_curve, get_bezier_first_derivative, get_bezier_second_derivative, \
     get_bezier_third_derivative
 
 
@@ -58,9 +58,11 @@ def read_file(file_path: str) -> np.ndarray:
     :return: The samples as np array.
     """
     if file_path.endswith(".csv"):
-        return read_csv(file_path)
+        data = read_csv(file_path)
+        return data
     elif file_path.endswith(".trk"):
-        return read_track_file(file_path)
+        data = read_track_file(file_path)
+        return data
 
 
 def generate_samples_and_handles(samples: np.ndarray) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
@@ -93,7 +95,8 @@ def generate_handle_points(samples: np.ndarray) -> Tuple[np.ndarray, np.ndarray]
 
 def generate_coefficients(n_samples: int) -> np.ndarray:
     """
-    Generate the cubic bezier coefficients for n samples. The values were calculated before on paper.
+    Generate the cubic bezier coefficients for n samples. The values were calculated on paper and are essential for
+    making the bezier-curves closed, "knick-frei" and "kruemmungsstetig".
     :param n_samples: The number of samples.
     :return: The coefficients as np array.
     """
