@@ -1,5 +1,5 @@
 # Achterbahnsimulation
-Projekt des Kurses "Computergraphik" an der HAW im SS 21.
+Projekt des Kurses "Mathematische Methoden der Computergraphik" an der HAW im SS 21.
 
 Python 3.7;
 IDE: PyCharm 2021.1.3;
